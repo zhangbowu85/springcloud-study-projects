@@ -1,0 +1,27 @@
+server.port: 18888
+
+spring:
+  application.name: config-server
+
+  profiles.active: native
+
+  cloud.config.server:
+    native.searchLocations: file:///C:/Users/zhangbow/Documents/WorkArchive_Locally/zbw_study_projects/SpringCloudPrjs/config-repo/
+    accept-empty: false
+
+management.endpoint.health.show-details: "ALWAYS"
+management.endpoints.web.exposure.include: "*"
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      initialInstanceInfoReplicationIntervalSeconds: 500
+      registryFetchIntervalSeconds: 500
+  instance:
+    leaseRenewalIntervalInSeconds: 500
+    leaseExpirationDurationInSeconds: 500
+
+logging.level.root: debug

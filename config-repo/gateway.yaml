@@ -1,0 +1,42 @@
+server.port: 8080
+spring.application.name: gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      initialInstanceInfoReplicationIntervalSeconds: 5
+      registryFetchIntervalSeconds: 5
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        - id: product
+          uri: lb://product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - StripPrefix=1 #means gateway will remove the first path segment when forwarding, 2 means 2 path segment
+        - id: comment
+          uri: lb://comment
+          predicates:
+            - Path=/api/comment/**
+          filters:
+            - StripPrefix=1
+  zipkin:
+    sender.type: web
+    base-url: http://192.168.56.105:9411
+    service.name: product
+
+  sleuth.sampler.probability: 1
+
+  main:
+    allow-bean-definition-overriding: true

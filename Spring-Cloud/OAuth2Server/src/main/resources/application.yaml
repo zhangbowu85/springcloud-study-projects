@@ -1,0 +1,20 @@
+spring.application.name: OAuth2-Server
+jwt.key: 9faa372517ac1d389758d3750fc07acf00f542277f26fec2ce4593e93f64e338
+server.port: 18080
+
+logging:
+  level:
+    org.springframework.security: trace
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      initialInstanceInfoReplicationIntervalSeconds: 5
+      registryFetchIntervalSeconds: 5
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+
+jwt.sign.key: auth2-test-key

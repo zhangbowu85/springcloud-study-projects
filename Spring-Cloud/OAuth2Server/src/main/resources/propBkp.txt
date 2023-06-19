@@ -1,0 +1,29 @@
+spring:
+  security:
+    oauth2:
+      authorizationserver:
+        client:
+          oidc-client:
+            registration:
+              client-id: "bowu"
+              client-secret: "{noop}123456"
+              client-authentication-methods:
+                - "client_secret_basic"
+              authorization-grant-types:
+                - "authorization_code"
+                - "refresh_token"
+              redirect-uris:
+                - "http://127.0.0.1:8080/login/oauth2/code/oidc-client"
+              post-logout-redirect-uris:
+                - "http://127.0.0.1:8080/role/all"
+              scopes:
+                - "openid"
+                - "profile"
+            require-authorization-consent: true
+
+
+# visit by url
+http://127.0.0.1:18080/oauth2/authorize?response_type=code&client_id=reader&scope=ALL&redirect_url=http://localhost:8001/product/all
+
+http://127.0.0.1:18080/oauth2/token?client_id=reader&redirect_url=http://localhost:8001/product/all&grant_type=authorization_code
+get access_token:

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
+        </processorPath>
+        <module name="SpringCloudPrjs.ServiceGroup2.Comments.main" />
+        <module name="SpringCloudPrjs.ServiceGroup1.UserManagement.main" />
+        <module name="SpringCloudPrjs.Spring-Cloud.ConfigServer.main" />
+        <module name="SpringCloudPrjs.Spring-Cloud.Gateway.main" />
+        <module name="SpringCloudPrjs.Spring-Cloud.OpenFeinServiceInvoker.main" />
+        <module name="SpringCloudPrjs.ServiceGroup2.Product.main" />
+        <module name="SpringCloudPrjs.Spring-Cloud.OAuth2Server.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17">
+      <module name="zbw.example.springcloud.SpringCloudPrjs.Spring-Cloud.OAuth2Server.main" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

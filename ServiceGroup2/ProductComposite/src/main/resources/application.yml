@@ -1,0 +1,24 @@
+spring.application.name: product-composite
+server.port: 8000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      initialInstanceInfoReplicationIntervalSeconds: 5
+      registryFetchIntervalSeconds: 5
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        port: 18763
+        dashboard: localhost:8748
+
+  main:
+    allow-bean-definition-overriding=true:
+
+feign:sentinel:enable: true

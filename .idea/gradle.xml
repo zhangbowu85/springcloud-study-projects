@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/buildSrc" name="buildSrc">
+                <projects>
+                  <project path="$PROJECT_DIR$/buildSrc" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ServiceGroup1" />
+            <option value="$PROJECT_DIR$/ServiceGroup1/UserManagement" />
+            <option value="$PROJECT_DIR$/ServiceGroup2" />
+            <option value="$PROJECT_DIR$/ServiceGroup2/Api" />
+            <option value="$PROJECT_DIR$/ServiceGroup2/Comments" />
+            <option value="$PROJECT_DIR$/ServiceGroup2/Product" />
+            <option value="$PROJECT_DIR$/ServiceGroup2/ProductComposite" />
+            <option value="$PROJECT_DIR$/Spring-Cloud" />
+            <option value="$PROJECT_DIR$/Spring-Cloud/ConfigServer" />
+            <option value="$PROJECT_DIR$/Spring-Cloud/Eureka" />
+            <option value="$PROJECT_DIR$/Spring-Cloud/Gateway" />
+            <option value="$PROJECT_DIR$/Spring-Cloud/OAuth2Server" />
+            <option value="$PROJECT_DIR$/Spring-Cloud/OpenFeinServiceInvoker" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

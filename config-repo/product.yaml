@@ -1,0 +1,18 @@
+server.port: 8001
+spring:
+  autoconfigure:  #if only using redis, need to disable this when using JPA
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+  redis:
+    database: 0
+    host: 192.168.56.105
+    port: 6379
+
+  zipkin:
+    sender.type: web
+    base-url: http://192.168.56.105:9411
+    service.name: product
+  sleuth.sampler.probability: 1
+
+app.description: product service
